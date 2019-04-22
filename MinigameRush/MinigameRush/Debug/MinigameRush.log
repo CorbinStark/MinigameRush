@@ -1,0 +1,101 @@
+﻿  Main.cpp
+c:\users\darkz\source\repos\minigamerush\minigamerush\defines.h(175): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(197): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(234): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(272): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(590): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(591): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(604): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(605): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(618): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(619): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(632): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(633): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(673): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(674): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(860): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(930): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(931): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(932): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(937): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(938): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(939): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(944): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(945): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(950): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\maths.h(951): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\shader.h(236): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\font.h(73): warning C4018: '<': signed/unsigned mismatch
+c:\users\darkz\source\repos\minigamerush\minigamerush\font.h(79): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\font.h(80): warning C4244: '+=': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\font.h(82): warning C4244: '+=': conversion from 'float' to 'unsigned int', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\font.h(105): warning C4018: '<': signed/unsigned mismatch
+c:\users\darkz\source\repos\minigamerush\minigamerush\font.h(108): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\font.h(115): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\font.h(123): warning C4018: '<': signed/unsigned mismatch
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(200): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(206): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(212): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(218): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(268): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(277): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(286): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(295): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(368): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(374): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(380): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(386): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(416): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(419): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(427): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(428): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(435): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(438): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(439): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(446): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(449): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(450): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(457): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(460): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(461): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\render2d.h(468): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\window.h(112): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\window.h(113): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\window.h(115): warning C4244: 'initializing': conversion from 'float' to 'int32_t', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\window.h(118): warning C4244: '=': conversion from 'float' to 'int32_t', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\window.h(121): warning C4244: 'argument': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\utils.h(56): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+c:\users\darkz\source\repos\minigamerush\minigamerush\utils.h(56): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\utils.h(56): warning C4838: conversion from 'uint16_t' to 'float' requires a narrowing conversion
+c:\users\darkz\source\repos\minigamerush\minigamerush\utils.h(205): warning C4244: 'argument': conversion from 'float' to 'int32_t', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\utils.h(244): warning C4838: conversion from 'int32_t' to 'float' requires a narrowing conversion
+c:\users\darkz\source\repos\minigamerush\minigamerush\utils.h(244): warning C4244: 'initializing': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\utils.h(261): warning C4244: 'initializing': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\utils.h(263): warning C4244: 'initializing': conversion from 'int32_t' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\utils.h(281): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\menu.h(22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\darkz\source\repos\minigamerush\minigamerush\main.cpp(24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SOIL.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+SOIL.lib(SOIL.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(SOIL.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\SOIL.pdb'; linking object as if no debug info
+SOIL.lib(image_helper.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(image_helper.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\SOIL.pdb'; linking object as if no debug info
+SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(stb_image_aug.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\SOIL.pdb'; linking object as if no debug info
+SOIL.lib(image_DXT.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(image_DXT.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\SOIL.pdb'; linking object as if no debug info
+glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(context.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(init.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(input.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(input.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(monitor.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(vulkan.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(vulkan.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(window.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_init.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_joystick.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_monitor.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_time.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_time.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_tls.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_tls.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_window.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(wgl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(wgl_context.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(egl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(egl_context.obj)' or at 'C:\Users\darkz\source\repos\MinigameRush\Debug\glfw.pdb'; linking object as if no debug info
+  MinigameRush.vcxproj -> C:\Users\darkz\source\repos\MinigameRush\Debug\MinigameRush.exe
