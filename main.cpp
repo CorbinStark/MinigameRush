@@ -6,6 +6,7 @@
 #include "ENGINE/bahamut.h"
 #include "states.h"
 #include "menu.h"
+#include "dodge.h"
 
 //uncomment this to get rid of command line
 //#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
@@ -26,8 +27,7 @@ int main() {
     set_master_volume(100); //0-255
     set_vsync(true);
     set_mouse_state(MOUSE_HIDDEN);
-    set_clear_color(WHITE);
-    set_clear_color(SKYBLUE);
+    set_clear_color(BLACK);
 
     RenderBatch* batch = &create_batch();
     Shader basic = load_default_shader_2D(); //shader is the program that runs on the graphics card for the hardware acceleration. This one is extremely simple, just renders textures onto squares.
@@ -40,9 +40,9 @@ int main() {
     stop_shader();
     //set_window_size(1360, 768);
 
-    //add states (minigames) here
     StateGroup group = {0};
     add_state(&group, new MenuState(), "menu");
+    add_state(&group, new DodgeState(), "DODGE");
     set_state(&group, "menu");
 
     while(window_open()) {
@@ -56,7 +56,7 @@ int main() {
         //prepares renderbatch and shader
         begin2D(batch, basic);
 
-        //run current minigame
+        //run current state
         update_current_state(&group, batch, mouse);
         //draw cursor
         draw_texture(batch, cursor, mouse.x, mouse.y);

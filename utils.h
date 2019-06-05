@@ -52,9 +52,13 @@ void update_animation(Animation* anim, i32 timer) {
 }
 
 static inline
-void draw_animation(RenderBatch* batch, Animation anim, f32 x, f32 y) {
-    Rect src = { anim.current * anim.width, 0, anim.width, anim.height };
+void draw_animation(RenderBatch* batch, Animation anim, f32 x, f32 y, bool right = true) {
+    Rect src = { (f32)anim.current * anim.width, 0, (f32)anim.width, (f32)anim.height };
     Rect dst = { x, y, anim.width * anim.scale, anim.height * anim.scale };
+
+    if(!right) anim.img.flip_flag = FLIP_HORIZONTAL;
+    else anim.img.flip_flag = 0;
+
     draw_texture_EX(batch, anim.img, src, dst);
 }
 
@@ -242,7 +246,7 @@ void draw_panel(RenderBatch* batch, Texture ninepatch[9], i32 x, i32 y, u16 widt
 
 static inline
 bool button(RenderBatch* batch, Texture btn, Texture btnDown, i32 x, i32 y, vec2 mouse) {
-    Rect button = { x, y, btn.width, btn.height };
+    Rect button = { (f32)x, (f32)y, (f32)btn.width, (f32)btn.height };
     bool collided = colliding(button, mouse.x, mouse.y);
     bool buttonReleased = is_button_released(MOUSE_BUTTON_LEFT);
 
