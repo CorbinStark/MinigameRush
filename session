@@ -51,8 +51,8 @@ vmap Ã« :m'<-2`>my`<mzgv`yo`z
 vmap Ãª :m'>+`<my`>mzgv`yo`z
 nmap Ã« mz:m-2`z
 nmap Ãª mz:m+`z
-nmap Îw <C-Home>
 nmap Îu <C-End>
+nmap Îw <C-Home>
 vmap ÎØ "*d
 vmap Î× "*d
 vmap ÎÕ "*y
@@ -118,10 +118,10 @@ set shortmess=aoO
 badd +1 main.cpp
 badd +1 states.h
 badd +1 menu.h
-badd +1 menu.cpp
+badd +18 menu.cpp
 badd +1 utils.h
-badd +0 dodge.h
-badd +0 dodge.cpp
+badd +1 dodge.h
+badd +110 dodge.cpp
 argglobal
 silent! argdel *
 $argadd main.cpp
@@ -249,12 +249,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 34 - ((33 * winheight(0) + 31) / 62)
+let s:l = 1 - ((0 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-34
-normal! 018|
+1
+normal! 0
 tabedit menu.cpp
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -265,8 +265,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 118 + 118) / 237)
-exe 'vert 2resize ' . ((&columns * 118 + 118) / 237)
+exe 'vert 1resize ' . ((&columns * 120 + 120) / 240)
+exe 'vert 2resize ' . ((&columns * 119 + 120) / 240)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -385,12 +385,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 18 - ((17 * winheight(0) + 31) / 62)
+let s:l = 1 - ((0 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-18
-normal! 05|
+1
+normal! 0
 wincmd w
 argglobal
 if bufexists('menu.h') | buffer menu.h | else | edit menu.h | endif
@@ -518,8 +518,8 @@ normal! zt
 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 118 + 118) / 237)
-exe 'vert 2resize ' . ((&columns * 118 + 118) / 237)
+exe 'vert 1resize ' . ((&columns * 120 + 120) / 240)
+exe 'vert 2resize ' . ((&columns * 119 + 120) / 240)
 tabedit dodge.cpp
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -530,8 +530,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 118 + 118) / 237)
-exe 'vert 2resize ' . ((&columns * 118 + 118) / 237)
+exe 'vert 1resize ' . ((&columns * 120 + 120) / 240)
+exe 'vert 2resize ' . ((&columns * 119 + 120) / 240)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -650,12 +650,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 110 - ((49 * winheight(0) + 31) / 62)
+let s:l = 1 - ((0 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-110
-normal! 029|
+1
+normal! 0
 wincmd w
 argglobal
 if bufexists('dodge.h') | buffer dodge.h | else | edit dodge.h | endif
@@ -776,15 +776,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 52 - ((51 * winheight(0) + 31) / 62)
+let s:l = 1 - ((0 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-52
-normal! 021|
+1
+normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 118 + 118) / 237)
-exe 'vert 2resize ' . ((&columns * 118 + 118) / 237)
+exe 'vert 1resize ' . ((&columns * 120 + 120) / 240)
+exe 'vert 2resize ' . ((&columns * 119 + 120) / 240)
 tabedit states.h
 set splitbelow splitright
 set nosplitbelow
@@ -909,12 +909,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 31) / 62)
+let s:l = 1 - ((0 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 017|
+1
+normal! 0
 tabedit utils.h
 set splitbelow splitright
 set nosplitbelow
@@ -1039,13 +1039,13 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 59 - ((37 * winheight(0) + 31) / 62)
+let s:l = 1 - ((0 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-59
+1
 normal! 0
-tabnext 3
+tabnext 1
 if exists('s:wipebuf') && s:wipebuf != bufnr('%')
   silent exe 'bwipe ' . s:wipebuf
 endif

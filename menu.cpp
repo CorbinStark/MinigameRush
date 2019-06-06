@@ -50,6 +50,7 @@ void MenuState::update(RenderBatch* batch, vec2 mouse) {
             //on winning boss minigame, go to the next round of minigames, harder now 
             //(in WarioWare this meant speeding everything up so you had less time to react)
         }
+        subMenu = MENU_MAIN;
         //set state to current minigame, then pop it off
         set_state(parent, minigameOrder.back().c_str());
         minigameOrder.pop_back();
