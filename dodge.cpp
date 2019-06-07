@@ -62,7 +62,7 @@ void DodgeState::enter() {
 }
 
 //code to run every frame
-void DodgeState::update(RenderBatch* batch, vec2 mouse) {
+MinigameState DodgeState::update(RenderBatch* batch, vec2 mouse) {
     timer++;
     draw_rectangle(batch, 0, 0, 1920.0f, 1080.0f, SKYBLUE);
 
@@ -118,7 +118,7 @@ void DodgeState::update(RenderBatch* batch, vec2 mouse) {
         Rect player = {(f32)playerX, (f32)playerY, (f32)idle.width, (f32)idle.height};
         if(colliding(vehicle, player)) {
             //failure!
-            set_state(parent, "menu");
+            return MINIGAME_DEFEAT;
         }
     }
 
@@ -132,8 +132,11 @@ void DodgeState::update(RenderBatch* batch, vec2 mouse) {
 
     if(timer > 1200) {
         //victory!
-        set_state(parent, "menu");
+        return MINIGAME_VICTORY;
     }
+
+    //return running if the minigame hasn't ended in a victory or defeat yet.
+    return MINIGAME_RUNNING;
 }
 
 //dispose data (textures, dynamic data allocated during enter(), etc.) when another state is switched to and this one is inactive

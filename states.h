@@ -5,12 +5,19 @@
 
 struct StateGroup;
 
+enum MinigameState {
+    MINIGAME_RUNNING,
+    MINIGAME_VICTORY,
+    MINIGAME_DEFEAT
+};
+
 struct State {
     virtual void enter() {}
-    virtual void update(RenderBatch* batch, vec2 mousePos) = 0;
+    virtual MinigameState update(RenderBatch* batch, vec2 mousePos) = 0;
     virtual void leave() {}
     virtual ~State() {}
     char* identifier;
+    int speed;
     StateGroup* parent;
 };
 
@@ -115,8 +122,8 @@ void remove_state(StateGroup* group, const char* identifier) {
 }
 
 static inline
-void update_current_state(StateGroup* group, RenderBatch* batch, vec2 mousePos) {
-    group->states.arr[group->current]->update(batch, mousePos);
+MinigameState update_current_state(StateGroup* group, RenderBatch* batch, vec2 mousePos) {
+    return group->states.arr[group->current]->update(batch, mousePos);
 }
 
 #endif

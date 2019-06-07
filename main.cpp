@@ -4,12 +4,11 @@
 
 
 #include "ENGINE/bahamut.h"
+
 #include "states.h"
 #include "menu.h"
-#include "dodge.h"
 
-//uncomment this to get rid of command line
-//#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 
 #define RENDER_WIDTH 1920.0f
 #define RENDER_HEIGHT 1080.0f
@@ -40,10 +39,7 @@ int main() {
     stop_shader();
     //set_window_size(1360, 768);
 
-    StateGroup group = {0};
-    add_state(&group, new MenuState(), "menu");
-    add_state(&group, new DodgeState(), "DODGE");
-    set_state(&group, "menu");
+    Menu menu = load_menu();
 
     while(window_open()) {
         //limit the viewport (rendering area) to fit the aspect ratio, this creates black bars on the side of the window if the window is too wide or too high
@@ -56,8 +52,8 @@ int main() {
         //prepares renderbatch and shader
         begin2D(batch, basic);
 
-        //run current state
-        update_current_state(&group, batch, mouse);
+        //run menu
+        main_menu(&menu, batch, mouse);
         //draw cursor
         draw_texture(batch, cursor, mouse.x, mouse.y);
             
