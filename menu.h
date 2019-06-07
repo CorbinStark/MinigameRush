@@ -62,7 +62,7 @@ void main_menu(Menu* menu, RenderBatch* batch, vec2 mouse) {
     if(menu->subMenu == MENU_MAIN) {
         int yInitial = (get_virtual_height() / 2) - (((16 * 3) + 15) * 3);
 
-        //draw_text(batch, &menu->font, "  Minigame Rush!", (get_virtual_width() / 2) - (get_string_width(&font, "  Minigame Rush!") / 2), 50);
+        draw_text(batch, &menu->font, "  Minigame Rush!", (get_virtual_width() / 2) - (get_string_width(&menu->font, "  Minigame Rush!") / 2), 50);
 
         if (text_button(batch, &menu->font, "  Play Game", &yInitial, mouse)) {
             menu->subMenu = MENU_PLAY;
@@ -79,6 +79,7 @@ void main_menu(Menu* menu, RenderBatch* batch, vec2 mouse) {
     }
     if(menu->subMenu == MENU_PLAY) {
         //run current minigame, increase speed in subsequent rounds (or maybe halfway through a round, who knows how it will be implemented)
+        //speed could also be replaced with "difficulty" instead, it would still be an int so no refactoring required.
         MinigameState result = update_current_state(&menu->group, batch, mouse, menu->speed);
 
         if(result != MINIGAME_RUNNING) {

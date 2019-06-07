@@ -10,8 +10,13 @@ DodgeState::DodgeState() {
 void DodgeState::enter() {
     timer = 0;
     font = load_neighbors_font(3);
+    //always dispose textures in leave(), they are dynamically allocated data. 
+    //(Just on GPU RAM instead of CPU RAM)
     Texture walkframes = load_texture("data/art/dodge/man_walk.png", GL_NEAREST);
     walk = create_animation("walkAnim", walkframes, 2, 11*5, 15*5, 7);
+    //scale all images for this minigame by 5, since they are VERY small pixel art images.
+    //There are better ways to do this, like using a framebuffer, but for the sake of simplicity
+    //I will just multiply all widths and heights by 5.
     walk.img.width *= 5;
     walk.img.height *= 5;
 
@@ -79,7 +84,7 @@ MinigameState DodgeState::update(RenderBatch* batch, vec2 mouse, int speed) {
         state = DODGE_PLAYER_IDLE;
         playerY = GROUND_LEVEL(idle.height);
     }
-
+    
     if(state == DODGE_PLAYER_IDLE)
         draw_texture(batch, idle, playerX, playerY);
     if(state == DODGE_PLAYER_WALK) {
@@ -112,6 +117,13 @@ MinigameState DodgeState::update(RenderBatch* batch, vec2 mouse, int speed) {
         state = DODGE_PLAYER_FALL;
     }
 
+    if(timer > 50)
+        vehicles[0].x+=vehicles[0].speed;
+    if(timer > 400)
+        vehicles[1].x+=vehicles[1].speed;
+    if(timer > 750)
+        vehicles[2].x+=vehicles[2].speed;
+
     for(int i = 0; i < NUM_VEHICLES; i++) {
         draw_texture(batch, vehicles[i].img, vehicles[i].x, vehicles[i].y);
         Rect vehicle = {(f32)vehicles[i].x, (f32)vehicles[i].y, (f32)vehicles[i].img.width, (f32)vehicles[i].img.height};
@@ -121,14 +133,6 @@ MinigameState DodgeState::update(RenderBatch* batch, vec2 mouse, int speed) {
             return MINIGAME_DEFEAT;
         }
     }
-
-    if(timer > 50) {
-        vehicles[0].x+=vehicles[0].speed;
-    }
-    if(timer > 400)
-        vehicles[1].x+=vehicles[1].speed;
-    if(timer > 750)
-        vehicles[2].x+=vehicles[2].speed;
 
     if(timer > 1200) {
         //victory!

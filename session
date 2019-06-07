@@ -51,8 +51,8 @@ vmap Ã« :m'<-2`>my`<mzgv`yo`z
 vmap Ãª :m'>+`<my`>mzgv`yo`z
 nmap Ã« mz:m-2`z
 nmap Ãª mz:m+`z
-nmap Îu <C-End>
 nmap Îw <C-Home>
+nmap Îu <C-End>
 vmap ÎØ "*d
 vmap Î× "*d
 vmap ÎÕ "*y
@@ -122,8 +122,8 @@ badd +1 menu.cpp
 badd +1 utils.h
 badd +1 dodge.h
 badd +1 dodge.cpp
-badd +0 sample.h
-badd +0 sample.cpp
+badd +1 sample.h
+badd +6 sample.cpp
 argglobal
 silent! argdel *
 $argadd main.cpp
@@ -251,11 +251,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 6 - ((5 * winheight(0) + 31) / 62)
+let s:l = 1 - ((0 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-6
+1
 normal! 0
 tabedit menu.h
 set splitbelow splitright
