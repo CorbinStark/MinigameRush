@@ -62,7 +62,7 @@ void DodgeState::enter() {
 }
 
 //code to run every frame
-MinigameState DodgeState::update(RenderBatch* batch, vec2 mouse) {
+MinigameState DodgeState::update(RenderBatch* batch, vec2 mouse, int speed) {
     timer++;
     draw_rectangle(batch, 0, 0, 1920.0f, 1080.0f, SKYBLUE);
 

@@ -29,7 +29,7 @@ struct DodgeState : public State {
     //initialize on state being switched to
     void enter();
     //code to run every frame
-    MinigameState update(RenderBatch* batch, vec2 mouse);
+    MinigameState update(RenderBatch* batch, vec2 mouse, int speed);
     //dispose data (textures, dynamic data allocated during enter(), etc.) when another state is switched to and this one is inactive
     void leave();
 

@@ -1,7 +1,8 @@
-
-
-//bahamut.h is the graphics library. Include it in all header files
-
+//
+//
+//                bahamut.h is the graphics library. Include it in all header files
+//
+//
 
 #include "ENGINE/bahamut.h"
 

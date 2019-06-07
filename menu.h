@@ -32,12 +32,14 @@ struct Menu {
     std::vector<std::string> minigameOrder;
     SubMenu subMenu;
     StateGroup group;
+    int speed;
 };
 
 static inline
 Menu load_menu() {
     Menu menu = {0};
 
+    menu.speed = 1;
     menu.font = load_neighbors_font(3);
 
     for(int i = 0; i < 10; i++) {
@@ -76,8 +78,8 @@ void main_menu(Menu* menu, RenderBatch* batch, vec2 mouse) {
         }
     }
     if(menu->subMenu == MENU_PLAY) {
-        //run current minigame
-        MinigameState result = update_current_state(&menu->group, batch, mouse);
+        //run current minigame, increase speed in subsequent rounds (or maybe halfway through a round, who knows how it will be implemented)
+        MinigameState result = update_current_state(&menu->group, batch, mouse, menu->speed);
 
         if(result != MINIGAME_RUNNING) {
             if(menu->minigameOrder.size() == 0) {
