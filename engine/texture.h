@@ -222,13 +222,13 @@ Framebuffer create_framebuffer(u32 width, u32 height, u16 param, u8 buffertype) 
 }
 
 INTERNAL inline
-Framebuffer create_colorbuffer(u32 width, u32 height, u16 param) {
-	create_framebuffer(width, height, param, COLORBUFFER);
+Framebuffer create_color_buffer(u32 width, u32 height, u16 param) {
+	return create_framebuffer(width, height, param, COLORBUFFER);
 }
 
 INTERNAL inline
-Framebuffer create_depthbuffer(u32 width, u32 height, u16 param) {
-	create_framebuffer(width, height, param, DEPTHBUFFER);
+Framebuffer create_depth_buffer(u32 width, u32 height, u16 param) {
+	return create_framebuffer(width, height, param, DEPTHBUFFER);
 }
 
 INTERNAL inline

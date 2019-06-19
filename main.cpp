@@ -9,7 +9,7 @@
 #include "states.h"
 #include "menu.h"
 
-#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+//#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 
 #define RENDER_WIDTH 1920.0f
 #define RENDER_HEIGHT 1080.0f
@@ -30,13 +30,13 @@ int main() {
     set_clear_color(BLACK);
 
     RenderBatch* batch = &create_batch();
-    Shader basic = load_default_shader_2D(); //shader is the program that runs on the graphics card for the hardware acceleration. This one is extremely simple, just renders textures onto squares.
+    batch->shader = load_default_shader_2D(); //shader is the program that runs on the graphics card for the hardware acceleration. This one is extremely simple, just renders textures onto squares.
     Texture cursor = load_texture("data/art/cursor.png", GL_LINEAR); //loads the cursor.png image into the texture, with a linear interpolation scaling model
 
     //set uniform projection matrix in the basic shader to project the normal (-1,-1) to (1, 1) coordinate system of OpenGL to a (0, 0) to (RENDER_WIDTH, RENDER_HEIGHT) coordinate system
     //no one needs to understand the specifics of how this works, just accept it for now. You'll need to know how it works if we do 3d though. It involves linear algebra
-    start_shader(basic);
-    upload_mat4(basic, "projection", orthographic_projection(0, 0, RENDER_WIDTH, RENDER_HEIGHT, -1, 1));
+    start_shader(batch->shader);
+    upload_mat4(batch->shader, "projection", orthographic_projection(0, 0, RENDER_WIDTH, RENDER_HEIGHT, -1, 1));
     stop_shader();
     //set_window_size(1360, 768);
 
@@ -51,7 +51,7 @@ int main() {
         //prepares screen
         begin_drawing();
         //prepares renderbatch and shader
-        begin2D(batch, basic);
+        begin2D(batch);
 
         //run menu
         main_menu(&menu, batch, mouse);

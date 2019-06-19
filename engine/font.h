@@ -32,6 +32,7 @@
 #include "defines.h"
 #include "texture.h"
 #include "maths.h"
+#include <string>
 #include <ft2build.h>
 #include FT_FREETYPE_H 
 
@@ -51,12 +52,7 @@ struct Font {
 
 static inline
 Character* get_char(Font& font, const GLchar c) {
-	try {
-		return font.characters[c];
-	}
-	catch (std::out_of_range) {
-		printf("Glyph '%c' is not valid\n", c);
-	}
+	return font.characters[c];
 }
 
 static inline

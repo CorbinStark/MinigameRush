@@ -134,7 +134,7 @@ MinigameState DodgeState::update(RenderBatch* batch, vec2 mouse, int speed) {
         }
     }
 
-    if(timer > 1200) {
+    if(timer > 15 seconds) {
         //victory!
         return MINIGAME_VICTORY;
     }

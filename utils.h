@@ -5,6 +5,10 @@
 #include <random>
 #include "ENGINE/bahamut.h"
 
+#define frames * 1
+#define seconds * 60
+#define minutes * 60 * 60
+
 static inline
 i32 random_int(i32 min, i32 max) {
     static std::random_device rd;
@@ -17,7 +21,7 @@ i32 random_int(i32 min, i32 max) {
 struct Animation {
     std::string identifier;
     Texture img;
-    u16 frames;
+    u16 framecount;
     u16 current;
     u16 width;
     u16 height;
@@ -30,12 +34,12 @@ struct BitmapFont {
 };
 
 static inline
-Animation create_animation(std::string name, Texture sheet, u16 frames, u16 width, u16 height, u32 delay, f32 scale = 1) {
+Animation create_animation(std::string name, Texture sheet, u16 framecount, u16 width, u16 height, u32 delay, f32 scale = 1) {
     Animation anim;
     anim.current = 0;
     anim.identifier = name;
     anim.img = sheet;
-    anim.frames = frames;
+    anim.framecount = framecount;
     anim.width = width;
     anim.height = height;
     anim.delay = delay;
@@ -47,7 +51,7 @@ static inline
 void update_animation(Animation* anim, i32 timer) {
     if (timer % anim->delay == 0)
         anim->current++;
-    if (anim->current >= anim->frames)
+    if (anim->current >= anim->framecount)
         anim->current = 0;
 }
 

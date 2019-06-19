@@ -130,9 +130,8 @@ RenderBatch create_batch() {
 }
 
 INTERNAL inline
-void begin2D(RenderBatch* batch, Shader shader, bool blending = true, bool depthTest = false) {
-	batch->shader = shader;
-	start_shader(shader);
+void begin2D(RenderBatch* batch, bool blending = true, bool depthTest = false) {
+	start_shader(batch->shader);
 
 	if (blending)
 		glEnable(GL_BLEND);
@@ -150,7 +149,7 @@ void begin2D(RenderBatch* batch, Shader shader, bool blending = true, bool depth
 }
 
 INTERNAL inline
-i32 submit_tex(RenderBatch* batch, Texture tex) {
+int submit_tex(RenderBatch* batch, Texture tex) {
 	int texSlot = 0;
 	bool found = false;
 	for (u32 i = 0; i < batch->texcount; ++i) {
@@ -163,7 +162,7 @@ i32 submit_tex(RenderBatch* batch, Texture tex) {
 	if (!found) {
 		if (batch->texcount >= BATCH_MAX_TEXTURES) {
 			end2D(batch);
-			begin2D(batch, batch->shader);
+			begin2D(batch);
 		}
 		batch->textures[batch->texcount++] = tex.ID;
 		texSlot = batch->texcount;
@@ -633,7 +632,7 @@ void main() {
 	pass_uv = uv;
 	pass_texid = texid;
 	
-	gl_Position = projection * view * vec4(position, 1.0, 1.0);
+	gl_Position = view * projection * vec4(position, 1.0, 1.0);
 }
 
 )FOO";
